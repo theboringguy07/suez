@@ -1,0 +1,47 @@
+{
+  "name": "@theboringguy07/suez",
+  "version": "0.2.0",
+  "description": "CLI open-source contributor toolkit.",
+  "license": "MIT",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=18"
+  },
+  "bin": {
+    "suez": "bin/run.js"
+  },
+  "files": [
+    "bin",
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepack": "npm run build",
+    "start": "node ./bin/run.js",
+    "dev": "tsx ./src/dev.ts"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "cli",
+    "github",
+    "graphql",
+    "open-source",
+    "issues",
+    "oclif"
+  ],
+  "dependencies": {
+    "@oclif/core": "^4.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.8.0"
+  },
+  "oclif": {
+    "bin": "suez",
+    "commands": "./dist/commands",
+    "topicSeparator": " "
+  }
+}
